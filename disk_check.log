@@ -1,0 +1,17 @@
+2026-07-19 20:45:15 : Disk usage check started.
+2026-07-19 20:45:17 : C:/Program : 108G : OK
+2026-07-19 20:45:17 : Disk usage check completed.
+2026-07-19 20:46:05 : Disk usage check started.
+2026-07-19 20:46:06 : C:/Program : 108G : OK
+2026-07-19 20:46:06 : Disk usage check completed.
+2026-07-19 20:54:42 : Disk usage check started.
+2026-07-19 20:54:43 : C:/Program :  : CRITICAL
+2026-07-19 20:54:43 : Disk usage check completed.
+2026-07-19 21:11:14 : Disk usage check started.
+2026-07-19 21:11:17 : Current Usage : 55%
+2026-07-19 21:11:18 : Status : OK
+2026-07-19 21:11:18 : Disk usage check completed.
+2026-07-19 21:12:32 : Disk usage check started.
+2026-07-19 21:12:33 : Current Usage : 55%
+2026-07-19 21:12:33 : Status : WARNING
+2026-07-19 21:12:33 : Disk usage check completed.

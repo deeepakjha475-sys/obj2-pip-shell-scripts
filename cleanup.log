@@ -1,0 +1,52 @@
+2026-07-19 21:46:59 : Cleanup started.
+2026-07-19 21:47:00 : Directory : .
+2026-07-19 21:47:00 : Retention : 7 Days
+2026-07-19 21:47:00 : Mode : dry-run
+2026-07-19 21:47:05 : No files found.
+2026-07-19 21:47:29 : Cleanup started.
+2026-07-19 21:47:29 : Directory : .
+2026-07-19 21:47:29 : Retention : 7 Days
+2026-07-19 21:47:30 : Mode : archive
+2026-07-19 21:47:30 : No files found.
+2026-07-19 21:48:56 : Cleanup started.
+2026-07-19 21:48:56 : Directory : .
+2026-07-19 21:48:56 : Retention : 7 Days
+2026-07-19 21:48:56 : Mode : delete
+2026-07-19 21:48:57 : No files found.
+2026-07-19 21:49:03 : Cleanup started.
+2026-07-19 21:49:03 : Directory : .
+2026-07-19 21:49:03 : Retention : 7 Days
+2026-07-19 21:49:04 : Mode : dry-run
+2026-07-19 21:49:04 : No files found.
+2026-07-19 21:54:20 : Cleanup started.
+2026-07-19 21:54:20 : Directory : .
+2026-07-19 21:54:21 : Retention : 7 Days
+2026-07-19 21:54:21 : Mode : dry-run
+2026-07-19 21:54:21 : No files found.
+2026-07-19 21:54:45 : Cleanup started.
+2026-07-19 21:54:45 : Directory : .
+2026-07-19 21:54:45 : Retention : 7 Days
+2026-07-19 21:54:45 : Mode : archive
+2026-07-19 21:54:46 : No files found.
+2026-07-19 21:55:11 : Cleanup started.
+2026-07-19 21:55:11 : Directory : .
+2026-07-19 21:55:12 : Retention : 7 Days
+2026-07-19 21:55:12 : Mode : dry-run
+2026-07-19 21:55:12 : No files found.
+2026-07-19 21:55:52 : Cleanup started.
+2026-07-19 21:55:53 : Directory : .
+2026-07-19 21:55:53 : Retention : 7 Days
+2026-07-19 21:55:53 : Mode : dry-run
+2026-07-19 21:55:54 : No files found.
+2026-07-19 22:22:20 : Cleanup started.
+2026-07-19 22:22:20 : Directory : logs
+2026-07-19 22:22:20 : Retention : 0 Days
+2026-07-19 22:22:20 : Mode : dry-run
+2026-07-19 22:22:21 : Dry run completed.
+2026-07-19 22:22:21 : Cleanup completed.
+2026-07-19 22:22:38 : Cleanup started.
+2026-07-19 22:22:38 : Directory : logs
+2026-07-19 22:22:38 : Retention : 0 Days
+2026-07-19 22:22:39 : Mode : archive
+2026-07-19 22:22:41 : Files archived.
+2026-07-19 22:22:41 : Cleanup completed.
