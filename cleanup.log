@@ -50,3 +50,20 @@
 2026-07-19 22:22:39 : Mode : archive
 2026-07-19 22:22:41 : Files archived.
 2026-07-19 22:22:41 : Cleanup completed.
+2026-07-20 12:20:55 : Cleanup started.
+2026-07-20 12:20:55 : Directory : .
+2026-07-20 12:20:55 : Retention : 7 Days
+2026-07-20 12:20:55 : Mode : dry-run
+2026-07-20 12:20:58 : No files found.
+2026-07-20 12:21:13 : Cleanup started.
+2026-07-20 12:21:13 : Directory : .
+2026-07-20 12:21:14 : Retention : 0 Days
+2026-07-20 12:21:14 : Mode : dry-run
+2026-07-20 12:21:15 : Dry run completed.
+2026-07-20 12:21:15 : Cleanup completed.
+2026-07-20 12:23:24 : Cleanup started.
+2026-07-20 12:23:24 : Directory : logs/
+2026-07-20 12:23:25 : Retention : 0 Days
+2026-07-20 12:23:25 : Mode : archive
+2026-07-20 12:23:27 : Files archived.
+2026-07-20 12:23:27 : Cleanup completed.

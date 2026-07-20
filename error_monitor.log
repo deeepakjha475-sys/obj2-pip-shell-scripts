@@ -1,0 +1,15 @@
+2026-07-20 11:29:33 : Monitoring started.
+2026-07-20 11:29:34 : File : application.log
+2026-07-20 11:29:34 : Pattern : ERROR
+2026-07-20 11:29:35 : Matches : 2
+2026-07-20 11:29:35 : Monitoring completed.
+2026-07-20 11:29:57 : Monitoring started.
+2026-07-20 11:29:58 : File : application.log
+2026-07-20 11:29:58 : Pattern : Exception
+2026-07-20 11:29:58 : Matches : 1
+2026-07-20 11:29:59 : Monitoring completed.
+2026-07-20 12:25:22 : Monitoring started.
+2026-07-20 12:25:22 : File : application.log
+2026-07-20 12:25:23 : Pattern : ERROR
+2026-07-20 12:25:23 : Matches : 2
+2026-07-20 12:25:24 : Monitoring completed.
