@@ -1,248 +1,304 @@
 # Shell Script Utilities
 
-## Project Overview
+## Overview
 
-This repository contains a collection of reusable Unix/Linux shell scripts developed for common system administration and application support tasks. The scripts are designed with configurable parameters, input validation, logging, error handling, and meaningful exit codes to improve usability and maintainability.
-
-These utilities were developed as part of a professional scripting enhancement project to demonstrate automation of routine operational activities.
+Shell Script Utilities is a collection of reusable Unix/Linux shell scripts developed to automate common operational and system administration tasks. These utilities are designed for L1/L2 support engineers and demonstrate the use of configurable parameters, input validation, logging, meaningful exit codes, and operational best practices.
 
 ---
 
 ## Features
 
-- Configurable input parameters
+- Configurable command-line parameters
 - Input validation
-- Command/dependency validation
-- Logging for script execution
-- Help menu (`-h`)
-- Meaningful exit codes
-- Error handling
-- Unix/Linux compatible commands
-- Modular and reusable scripts
+- Dependency validation
+- Consistent logging
+- Help menu for each script
+- Script-specific exit codes
+- Safe file handling
+- Reusable operational utilities
+- Compatible with Linux and Git Bash
 
 ---
 
 ## Repository Structure
 
 ```
-ShellScriptUtilities/
+Shell_Script_Utilities/
 │
 ├── disk_check.sh
 ├── log_cleanup.sh
-├── error_monitor.sh
 ├── process_check.sh
-│
+├── error_monitor.sh
 ├── README.md
-│
 ├── disk_check.log
 ├── cleanup.log
-├── error_monitor.log
-└── process_check.log
+├── process_check.log
+└── error_monitor.log
 ```
 
 ---
 
-## Scripts Included
+# Scripts
 
-### 1. disk_check.sh
+## 1. disk_check.sh
 
-Checks current disk usage and compares it against configurable warning and critical thresholds.
+### Purpose
+
+Monitors disk utilization and reports the current disk status based on configurable warning and critical thresholds.
 
 ### Features
 
 - Configurable warning threshold
 - Configurable critical threshold
-- Input validation
+- Threshold validation
 - Dependency validation
+- Disk utilization monitoring
+- Status reporting (OK / WARNING / CRITICAL)
 - Logging
 - Help menu
-- Exit codes
 
 ### Usage
 
 ```bash
-sh disk_check.sh
+bash disk_check.sh [-w warning_threshold] [-c critical_threshold]
 ```
 
-```bash
-sh disk_check.sh -w 70 -c 90
-```
+### Example
 
 ```bash
-sh disk_check.sh -h
+bash disk_check.sh -w 70 -c 90
 ```
 
 ---
 
-### 2. log_cleanup.sh
+## 2. log_cleanup.sh
 
-Identifies old log files and performs cleanup operations.
+### Purpose
+
+Identifies old log files and performs cleanup operations using Dry Run, Archive, or Delete modes.
 
 ### Features
 
-- Configurable log directory
+- Configurable directory
 - Configurable retention period
 - Dry Run mode
 - Archive mode
 - Delete mode
+- Safety validation
 - Confirmation before deletion
+- Automatic archive folder creation
 - Logging
-- Input validation
-- Exit codes
+- Help menu
 
 ### Usage
 
 ```bash
-sh log_cleanup.sh -d logs -r 30 -n
+bash log_cleanup.sh -d <directory> -r <days> [-n | -a | -x]
 ```
 
-Dry Run
+### Examples
 
 ```bash
-sh log_cleanup.sh -d logs -r 30 -a
+bash log_cleanup.sh -d logs -r 7 -n
 ```
-
-Archive Files
 
 ```bash
-sh log_cleanup.sh -d logs -r 30 -x
+bash log_cleanup.sh -d logs -r 7 -a
 ```
-
-Delete Files
 
 ```bash
-sh log_cleanup.sh -h
+bash log_cleanup.sh -d logs -r 7 -x
 ```
-
-Help
 
 ---
 
-### 3. error_monitor.sh
+## 3. process_check.sh
 
-Searches a log file for configurable error patterns.
-
-### Features
-
-- Configurable log file
-- Configurable search pattern
-- Case-insensitive search
-- Match count
-- Displays matching entries with line numbers
-- Logging
-- Exit codes
-
-### Usage
-
-```bash
-sh error_monitor.sh -f application.log
-```
-
-Default Pattern (ERROR)
-
-```bash
-sh error_monitor.sh -f application.log -p WARNING
-```
-
-Custom Pattern
-
-```bash
-sh error_monitor.sh -h
-```
-
-Help
-
----
-
-### 4. process_check.sh
+### Purpose
 
 Checks whether a specified process is currently running.
 
 ### Features
 
-- Configurable process name
-- Unix/Linux compatible commands
+- Process validation
+- Exact process matching
+- Dependency validation
 - Logging
-- Input validation
 - Help menu
-- Exit codes
+- Meaningful exit codes
 
 ### Usage
 
 ```bash
-sh process_check.sh -p bash
+bash process_check.sh -p <process_name>
 ```
+
+### Example
 
 ```bash
-sh process_check.sh -p git
+bash process_check.sh -p bash
 ```
+
+---
+
+## 4. error_monitor.sh
+
+### Purpose
+
+Searches log files for configurable error patterns.
+
+### Features
+
+- Configurable search pattern
+- Case-insensitive search
+- Line number display
+- Match count
+- Logging
+- Help menu
+- Input validation
+
+### Usage
 
 ```bash
-sh process_check.sh -h
+bash error_monitor.sh -f <log_file> [-p pattern]
+```
+
+### Example
+
+```bash
+bash error_monitor.sh -f sample.log -p ERROR
 ```
 
 ---
 
-## Prerequisites
+# Exit Codes
 
-- Git Bash or Linux Environment
-- Bash Shell
-- grep
-- find
-- df
-- ps
-
----
-
-## Logging
-
-Each script generates its own log file.
-
-| Script | Log File |
-|---------|----------|
-| disk_check.sh | disk_check.log |
-| log_cleanup.sh | cleanup.log |
-| error_monitor.sh | error_monitor.log |
-| process_check.sh | process_check.log |
-
----
-
-## Exit Codes
+## disk_check.sh
 
 | Exit Code | Description |
-|------------|-------------|
-| 0 | Success |
+|-----------|-------------|
+| 0 | Successful execution |
+| 1 | Invalid threshold values |
+| 2 | Required command missing |
+
+---
+
+## log_cleanup.sh
+
+| Exit Code | Description |
+|-----------|-------------|
+| 0 | Successful execution |
+| 1 | Invalid input or unsafe directory |
+| 2 | Directory not found |
+| 3 | Operation cancelled |
+| 4 | Archive/Delete operation completed (as implemented) |
+
+---
+
+## process_check.sh
+
+| Exit Code | Description |
+|-----------|-------------|
+| 0 | Process running |
 | 1 | Invalid input |
-| 2 | Dependency missing / Invalid path |
-| 3 | Operation cancelled (where applicable) |
-| 4 | Unexpected runtime error (where applicable) |
+| 2 | Required command missing |
+| 3 | Process not running |
 
 ---
 
-## Test Scenarios
+## error_monitor.sh
 
-| Script | Success Scenario | Failure Scenario |
-|---------|------------------|------------------|
-| disk_check.sh | Valid threshold values | Invalid threshold values |
-| log_cleanup.sh | Dry run, archive, delete | Invalid directory |
-| error_monitor.sh | Pattern found | Log file not found |
-| process_check.sh | Running process detected | Process not running |
-
----
-
-## Error Handling
-
-The scripts perform validation before execution to handle common issues such as:
-
-- Missing required parameters
-- Invalid input values
-- Missing commands
-- Invalid directories
-- Missing log files
-- User cancellation during delete operations
+| Exit Code | Description |
+|-----------|-------------|
+| 0 | Pattern found |
+| 1 | Invalid input |
+| 2 | Log file not found |
+| 3 | Required command missing |
+| 4 | Pattern not found |
 
 ---
 
-## Author
+# Validation Performed
+
+The following scenarios were successfully validated:
+
+- Help menu execution
+- Successful execution
+- Invalid input handling
+- Missing dependency validation
+- Invalid directory validation
+- Invalid threshold validation
+- Process running validation
+- Process not running validation
+- Pattern found validation
+- Pattern not found validation
+- Dry Run execution
+- Archive execution
+- Delete execution
+- Log generation
+- Exit code verification
+- Bash syntax validation
+
+---
+
+# Logging
+
+Each utility generates its own execution log.
+
+| Script | Log File |
+|----------|----------|
+| disk_check.sh | disk_check.log |
+| log_cleanup.sh | cleanup.log |
+| process_check.sh | process_check.log |
+| error_monitor.sh | error_monitor.log |
+
+Each log records:
+
+- Execution start time
+- Input parameters
+- Validation results
+- Operation performed
+- Execution status
+- Exit code
+- Completion time
+
+---
+
+# Prerequisites
+
+- Linux or Git Bash
+- Bash shell
+- Required utilities:
+  - df
+  - find
+  - grep
+  - ps
+  - awk
+  - mkdir
+  - mv
+  - rm
+
+---
+
+# Documentation
+
+The project includes:
+
+- README
+- Detailed Runbook
+- Execution Screenshots
+- Test Evidence
+
+---
+
+# Author
 
 **Deepak Kumar Jha**
+
+---
+
+# Version
+
+**Version 2.0**
+
+Enhanced based on review feedback with improved validation, logging, operational safety, configurable parameters, help menus, and reusable shell scripting practices.

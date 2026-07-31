@@ -67,3 +67,86 @@
 2026-07-20 12:23:25 : Mode : archive
 2026-07-20 12:23:27 : Files archived.
 2026-07-20 12:23:27 : Cleanup completed.
+2026-07-31 13:13:45 : ==================================================
+2026-07-31 13:13:45 : Execution Started
+2026-07-31 13:13:45 : Directory : logs/archive/
+2026-07-31 13:13:45 : Retention : 0 Days
+2026-07-31 13:13:46 : Mode : dry-run
+2026-07-31 13:13:49 : Files Identified : 3
+2026-07-31 13:13:50 : Action Performed : Dry Run
+2026-07-31 13:13:50 : Files Listed : 3
+2026-07-31 13:13:50 : Execution Completed
+2026-07-31 13:13:50 : Exit Code : 0
+2026-07-31 13:13:51 : ==================================================
+2026-07-31 14:13:35 : ==================================================
+2026-07-31 14:13:35 : Execution Started
+2026-07-31 14:13:36 : Directory : logs
+2026-07-31 14:13:36 : Retention : 0 Days
+2026-07-31 14:13:36 : Mode : dry-run
+2026-07-31 14:13:37 : Files Identified : 3
+2026-07-31 14:13:37 : Action Performed : Dry Run
+2026-07-31 14:13:37 : Files Listed : 3
+2026-07-31 14:13:37 : Execution Completed
+2026-07-31 14:13:37 : Exit Code : 0
+2026-07-31 14:13:38 : ==================================================
+2026-07-31 14:16:23 : ==================================================
+2026-07-31 14:16:23 : Execution Started
+2026-07-31 14:16:24 : Directory : logs/archive
+2026-07-31 14:16:24 : Retention : 0 Days
+2026-07-31 14:16:24 : Mode : archive
+2026-07-31 14:16:25 : Files Identified : 3
+2026-07-31 14:16:26 : Archiving : logs/archive/app1.log
+2026-07-31 14:16:26 : Archiving : logs/archive/app2.log
+2026-07-31 14:16:27 : Archiving : logs/archive/error.log
+2026-07-31 14:16:27 : Action Performed : Archive
+2026-07-31 14:16:27 : Archive Directory : logs/archive/archive
+2026-07-31 14:16:27 : Files Archived : 3
+2026-07-31 14:16:28 : Execution Completed
+2026-07-31 14:16:28 : Exit Code : 4
+2026-07-31 14:16:28 : ==================================================
+2026-07-31 14:17:23 : ==================================================
+2026-07-31 14:17:24 : Execution Started
+2026-07-31 14:17:24 : Directory : logs/archive/archive
+2026-07-31 14:17:24 : Retention : 0 Days
+2026-07-31 14:17:24 : Mode : delete
+2026-07-31 14:17:25 : Files Identified : 3
+2026-07-31 14:17:31 : Deleting : logs/archive/archive/app1.log
+2026-07-31 14:17:31 : Deleting : logs/archive/archive/app2.log
+2026-07-31 14:17:31 : Deleting : logs/archive/archive/error.log
+2026-07-31 14:17:32 : Action Performed : Delete
+2026-07-31 14:17:32 : Files Deleted : 3
+2026-07-31 14:17:32 : Execution Completed
+2026-07-31 14:17:32 : Exit Code : 4
+2026-07-31 14:17:33 : ==================================================
+2026-07-31 14:36:26 : ==================================================
+2026-07-31 14:36:26 : Execution Started
+2026-07-31 14:36:27 : Directory : logs
+2026-07-31 14:36:27 : Retention : 0 Days
+2026-07-31 14:36:27 : Mode : dry-run
+2026-07-31 14:36:28 : No log files matched the selection criteria.
+2026-07-31 14:36:28 : Execution Completed
+2026-07-31 14:36:28 : Exit Code : 0
+2026-07-31 14:36:28 : ==================================================
+2026-07-31 15:01:41 : ==================================================
+2026-07-31 15:01:41 : Execution Started
+2026-07-31 15:01:42 : Directory : logs/archive
+2026-07-31 15:01:42 : Retention : 0 Days
+2026-07-31 15:01:42 : Mode : archive
+2026-07-31 15:01:43 : No log files matched the selection criteria.
+2026-07-31 15:01:43 : Execution Completed
+2026-07-31 15:01:44 : Exit Code : 0
+2026-07-31 15:01:44 : ==================================================
+2026-07-31 15:02:53 : ==================================================
+2026-07-31 15:02:53 : Execution Started
+2026-07-31 15:02:54 : Directory : logs/archive
+2026-07-31 15:02:54 : Retention : 0 Days
+2026-07-31 15:02:54 : Mode : archive
+2026-07-31 15:02:55 : Files Identified : 2
+2026-07-31 15:02:56 : Archiving : logs/archive/app.log
+2026-07-31 15:02:56 : Archiving : logs/archive/sample.log
+2026-07-31 15:02:57 : Action Performed : Archive
+2026-07-31 15:02:57 : Archive Directory : logs/archive/archive
+2026-07-31 15:02:57 : Files Archived : 2
+2026-07-31 15:02:57 : Execution Completed
+2026-07-31 15:02:58 : Exit Code : 4
+2026-07-31 15:02:58 : ==================================================
