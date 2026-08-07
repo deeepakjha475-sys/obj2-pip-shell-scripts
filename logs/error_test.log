@@ -1,0 +1,4 @@
+2026-08-07 10:00:01 INFO Service started
+2026-08-07 10:01:12 ERROR Authentication failed
+2026-08-07 10:02:20 ERROR Database timeout
+2026-08-07 10:03:05 WARNING Retry limit approaching
